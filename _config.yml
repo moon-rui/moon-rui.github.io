@@ -64,21 +64,21 @@ disqus:
 ## Comment system (gitalk) ##
 # please refer to https://github.com/gitalk/gitalk for more info.
 gitalk:
-  # clientID:  #Github Application Client ID
-  # clientSecret:  #Github Application Client Secret
-  # repository:  #Github repo
-  # owner:  #Github repo owner
-  # admin: #Github repo owner and collaborators, only these guys can initialize github issues, IT IS A LIST.
+  clientID: c349e82efe8ee382effb #Github Application Client ID
+  clientSecret: 7ed0e080574a1870a92eff3eba01e5dd3f7f5dcb #Github Application Client Secret
+  repository: moon-rui.github.io #Github repo
+  owner: moon-rui #Github repo owner
+  admin: [moon-rui] #Github repo owner and collaborators, only these guys can initialize github issues, IT IS A LIST.
     # - owner
 
 ## Google Analytics ##
-# ga_tracking_id:  #Google analytics id for the site
+ga_tracking_id: 119350605 #Google analytics id for the site
 
 ## Reading quantity (LeanCloud) ##
 leancloud:
-  # app_id:  #LeanCloud App id
-  # app_key:  #LeanCloud App key
-  # app_class:  #LeanCloud App class
+  app_id: DoeLX0gYRXPi13KemgI4tvMT-gzGzoHsz #LeanCloud App id
+  app_key: T8dkXdRnxDeq11iCzQNLpES3 #LeanCloud App key
+  app_class: Counter #LeanCloud App class
 
 # mathjax: true
 # mathjax_autoNumber: true
