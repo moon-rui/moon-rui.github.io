@@ -18,8 +18,8 @@ Hive使用2.3.3版本，官网下载地址http://archive.apache.org/dist/hive/
 **这里需要注意的是，Hive不需要像HBase、Zookeeper那样集群安装，只需安装在Master节点即可。**
 
 ```shell
-[hadoop@cetiti111 ~]$ tar -xzvf apache-hive-2.3.3-bin.tar.gz
-[hadoop@cetiti111 ~]$ mv apache-hive-2.3.3-bin hive-2.3.3	# 重命名文件夹
+tar -xzvf apache-hive-2.3.3-bin.tar.gz
+mv apache-hive-2.3.3-bin hive-2.3.3	# 重命名文件夹
 ```
 
 ## 3. 配置
@@ -46,8 +46,8 @@ source ~/.bashrc
 进入hive的conf目录，将hive-default.xml.template 文件复制为hive-site.xml
 
 ```shell
-[hadoop@cetiti111 ~]$ cd hive-2.3.3/conf/
-[hadoop@cetiti111 conf]$ cp hive-default.xml.template hive-site.xml
+cd hive-2.3.3/conf/
+cp hive-default.xml.template hive-site.xml
 ```
 
 **注意：**在安装Hive时，默认情况下，元数据存储在Derby数据库中。Derby是一个完全用Java编写的数据库，所以可以跨平台，但需要在JVM中运行。因为多用户和系统可能需要并发访问元数据存储，所以默认的内置数据库并不适用于生产环境。任何一个适用于JDBC进行连接的数据库都可用作元数据库存储，这里我们把MySQL作为存储元数据的数据库。 
@@ -99,7 +99,7 @@ show databases;
     </property>
     <property>
         <name>javax.jdo.option.ConnectionURL</name>
-        <value>jdbc:mysql://cetiti111:3306/hive?createDatabaseIfNotExist=true</value>
+        <value>jdbc:mysql://localhost:3306/hive?createDatabaseIfNotExist=true</value>
     </property>
     <property>
         <name>javax.jdo.option.ConnectionDriverName</name>
@@ -119,7 +119,7 @@ show databases;
 **配置hive-env.sh**
 
 ```shell
-[hadoop@cetiti111 conf]$ cp hive-env.sh.template hive-env.sh	# 从模板文件中复制
+cp hive-env.sh.template hive-env.sh	# 从模板文件中复制
 ```
 
 配置内容如下：
