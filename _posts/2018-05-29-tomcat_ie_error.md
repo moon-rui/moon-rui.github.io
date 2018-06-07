@@ -59,9 +59,9 @@ if(IS_CONTROL[i] || i > 127 || i == 32 || i == 34 || i == 35 || i == 60 || i == 
 
 添加或者修改：
 
-tomcat.util.http.parser.HttpParser.requestTargetAllow=|{}
+tomcat.util.http.parser.HttpParser.requestTargetAllow=\|{}
 
-上述配置允许URL中包含|{}字符，如果包含中文就不能使用这种配置。
+上述配置允许URL中包含\|{}字符，如果包含中文就不能使用这种配置。
 
 **解决方法2：**
 

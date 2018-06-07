@@ -2,9 +2,7 @@
 layout: post
 title: Hadoop集群安装配置
 key: 2018-05-29-hadoop_cluster_install
-tags: 
-   - Hadoop
-   - 分布式
+tags: Hadoop
 ---
 
 ## 1. 环境说明

@@ -2,9 +2,7 @@
 layout: post
 title: Zookeeper集群安装配置
 key: 2018-05-29-zookeeper_cluster_install
-tags: 
-   - Zookeeper
-   - 分布式
+tags: Zookeeper
 ---
 
 ## 1. 环境说明
