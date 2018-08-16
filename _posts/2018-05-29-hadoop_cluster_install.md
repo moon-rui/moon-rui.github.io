@@ -5,6 +5,10 @@ key: 2018-05-29-hadoop_cluster_install
 tags: Hadoop
 ---
 
+> CentOS 6.5 Hadoop 2.7.6
+
+<!--more-->
+
 ## 1. 环境说明
 
 本手册以CentOS 6.5 64位作为系统环境，基于Hadoop 2.7.6版本。使用10.0.12.111，10.0.12.112，10.0.12.113三个节点作为集群环境，其中111为master节点，其余两个作为slave节点。

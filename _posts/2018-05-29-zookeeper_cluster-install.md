@@ -5,6 +5,10 @@ key: 2018-05-29-zookeeper_cluster_install
 tags: Zookeeper
 ---
 
+> CentOS 6.5 Zookeeper 3.4.10
+
+<!--more-->
+
 ## 1. 环境说明
 
 本次安装部署使用三台主机作为集群，系统为CentOS 6.5 64位。/etc/hosts的配置信息如下：

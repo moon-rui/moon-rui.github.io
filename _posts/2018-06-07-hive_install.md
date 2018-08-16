@@ -5,6 +5,10 @@ key: 2018-06-07-hive_install
 tags: Hive
 ---
 
+> CentOS 6.5环境 Hive 2.3.3版本
+
+<!--more-->
+
 ## 1. 环境说明
 
 三台CentOS 6.5 64位环境服务器，并已安装好Hadoop集群环境。

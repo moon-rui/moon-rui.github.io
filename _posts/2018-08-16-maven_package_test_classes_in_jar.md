@@ -118,5 +118,6 @@ public class ServiceTest {
 ## 打包并测试
 执行maven命令：
 > mvn clean compile test-compile assembly:single
+
 运行jar包：
 > java -jar test-1.0-assembly.jar
