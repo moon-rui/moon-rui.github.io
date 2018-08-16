@@ -1,5 +1,4 @@
 ---
-layout: post
 title: Jekyll - Definition
 key: 20160505
 tags:

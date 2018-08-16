@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: article
 title: 异常解决：Invalid character found in the request target. The valid characters are defined in RFC 7230 and RFC 3986
 key: 2018-05-29-tomcat_ie_error
 tags: 

@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: article
 title: Hello World
 key: 2018-05-17-helloworld
 ---

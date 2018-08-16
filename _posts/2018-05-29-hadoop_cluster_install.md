@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: article
 title: Hadoop集群安装配置
 key: 2018-05-29-hadoop_cluster_install
 tags: Hadoop

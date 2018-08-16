@@ -1,7 +1,15 @@
 .clearfix {
-  &:after {
+  &::after {
     content: "";
     display: table;
     clear: both;
   }
+}
+
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
 }

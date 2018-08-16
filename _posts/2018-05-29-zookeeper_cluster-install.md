@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: article
 title: Zookeeper集群安装配置
 key: 2018-05-29-zookeeper_cluster_install
 tags: Zookeeper

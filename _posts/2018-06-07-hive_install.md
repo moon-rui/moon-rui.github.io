@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: article
 title: Hive安装配置
 key: 2018-06-07-hive_install
 tags: Hive

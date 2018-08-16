@@ -1,10 +1,10 @@
 language: ruby
 rvm:
-  - 2.4.0
+  - 2.4.1
 branches:
   only:
   - master
-script: JEKYLL_ENV=production bundle exec jekyll build --config ./_config.demo.yml
+script: JEKYLL_ENV=production bundle exec jekyll build --config ./docs/_config.yml
 deploy:
   edge:
     branch: v1.8.47
