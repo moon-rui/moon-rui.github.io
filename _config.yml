@@ -105,11 +105,11 @@ sources: # bootcdn (default), unpkg
 ## => Comments
 ##############################
 comments:
-  provider: false # false (default), "disqus", "gitalk", "custom"
+  provider: disqus # false (default), "disqus", "gitalk", "custom"
 
   ## Disqus
   disqus:
-    shortname: # the Disqus shortname for the site
+    shortname: moon-rui.github.io # the Disqus shortname for the site
 
   ## Gitalk
   # please refer to https://github.com/gitalk/gitalk for more info.
