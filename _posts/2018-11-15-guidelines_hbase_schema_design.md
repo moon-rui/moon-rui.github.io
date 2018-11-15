@@ -1,6 +1,6 @@
 ---
 layout: article
-title: [译] HBase表模式设计指南
+title: 【译】HBase表模式设计指南
 tags: HBase
 ---
 
