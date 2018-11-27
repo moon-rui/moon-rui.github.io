@@ -9,7 +9,7 @@ tags: Spark
 
 <!--more-->
 
-进入官网下载地址https://spark.apache.org/downloads.html ，这里选择`Pre-built for Apache Hadoop 2.7 and later `版本。
+进入官网下载地址<https://spark.apache.org/downloads.html>，这里选择`Pre-built for Apache Hadoop 2.7 and later `版本。
 
 下载完成解压后，进入Spark所在目录的bin目录，通过`spark-shell`命令进入Spark环境。可以按照官网的[quick-start](https://spark.apache.org/docs/latest/quick-start.html)文档进行操作。
 
@@ -19,7 +19,7 @@ tags: Spark
 
 doop binaries.
 
-这个问题是因为Windows中没有安装Hadoop环境，可以通过https://github.com/steveloughran/winutils/blob/master/hadoop-2.7.1/bin/winutils.exe 下载winutils.exe文件来构建一个虚拟的Hadoop环境，并配置系统变量`HADOOP_HOME`。
+这个问题是因为Windows中没有安装Hadoop环境，可以通过<https://github.com/steveloughran/winutils/blob/master/hadoop-2.7.1/bin/winutils.exe>下载winutils.exe文件来构建一个虚拟的Hadoop环境，并配置系统变量`HADOOP_HOME`。
 
 **注意：**`winutils.exe`文件必须放在`HADOOP_HOME`路径的bin目录下。例如：配置`HADOOP_HOME`系统变量为`D:\Tools\hadoop`，则`winutils.exe`文件放在`D:\Tools\hadoop\bin`目录下。
 
@@ -95,4 +95,4 @@ res4: Array[(String, Long)] = Array((online,1), (graphs,1), (["Parallel,1), (["B
 
 
 
-参考文档：https://dzone.com/articles/working-on-apache-spark-on-windows
+参考文档：<https://dzone.com/articles/working-on-apache-spark-on-windows>

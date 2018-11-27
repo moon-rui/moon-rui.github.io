@@ -29,4 +29,4 @@ echo 3 > /proc/sys/vm/drop_caches
 
 
 
-参考文档：https://www.tecmint.com/clear-ram-memory-cache-buffer-and-swap-space-on-linux
+参考文档：<https://www.tecmint.com/clear-ram-memory-cache-buffer-and-swap-space-on-linux>

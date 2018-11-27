@@ -13,7 +13,7 @@ tags: Hive
 
 三台CentOS 6.5 64位环境服务器，并已安装好Hadoop集群环境。
 
-Hive使用2.3.3版本，官网下载地址http://archive.apache.org/dist/hive/
+Hive使用2.3.3版本，官网下载地址<http://archive.apache.org/dist/hive/>
 
 ## 2. 安装
 
@@ -222,7 +222,7 @@ Took 0.5954 seconds
 
 ## 参考资料
 
-- Hive-2.1.1的安装 https://blog.csdn.net/chenshijie2011/article/details/76147357
+- Hive-2.1.1的安装 <https://blog.csdn.net/chenshijie2011/article/details/76147357>
 
-- linux中hive安装和部署详解 https://blog.csdn.net/a123demi/article/details/72742279
+- linux中hive安装和部署详解 <https://blog.csdn.net/a123demi/article/details/72742279>
 

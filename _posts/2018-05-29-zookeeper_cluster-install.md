@@ -23,7 +23,7 @@ tags: Zookeeper
 
 ## 2. 安装
 
-官网下载地址https://archive.apache.org/dist/zookeeper/
+官网下载地址<https://archive.apache.org/dist/zookeeper/>
 
 下载完成后解压安装包：
 
@@ -161,6 +161,6 @@ Mode: follower
 
 ## 6. 参考资料
 
-Zookeeper-3.4.9 集群搭建     https://blog.csdn.net/chenshijie2011/article/details/75669942
+Zookeeper-3.4.9 集群搭建     <https://blog.csdn.net/chenshijie2011/article/details/75669942>
 
-centos6.5环境下zookeeper-3.4.6集群环境部署及单机部署详解    https://blog.csdn.net/reblue520/article/details/52279486
+centos6.5环境下zookeeper-3.4.6集群环境部署及单机部署详解    <https://blog.csdn.net/reblue520/article/details/52279486>

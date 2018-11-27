@@ -48,8 +48,8 @@ mount /dev/vdc1 /target/
 
 **参考资料：**
 
-https://blog.csdn.net/jiandanjinxin/article/details/69969217
+<https://blog.csdn.net/jiandanjinxin/article/details/69969217>
 
-https://www.jianshu.com/p/37a550cc0371?utm_campaign=maleskine&utm_content=note&utm_medium=seo_notes&utm_source=recommendation
+<https://www.jianshu.com/p/37a550cc0371?utm_campaign=maleskine&utm_content=note&utm_medium=seo_notes&utm_source=recommendation>
 
-https://jaywcjlove.gitee.io/linux-command/c/fdisk.html
+<https://jaywcjlove.gitee.io/linux-command/c/fdisk.html>

@@ -122,7 +122,7 @@ Java HotSpot(TM) 64-Bit Server VM (build 25.121-b13, mixed mode)
 
 ### 3.4 安装Hadoop
 
-可以访问http://hadoop.apache.org/releases.html网址选择相应的版本下载Hadoop，这里选择的是2.7.6版本。需要注意的是，下载时请下载binary格式即 **hadoop-2.x.y.tar.gz** 这个格式的文件，这是编译好的，另一个包含 src 的则是 Hadoop 源代码，需要进行编译才可使用。
+可以访问<http://hadoop.apache.org/releases.html>网址选择相应的版本下载Hadoop，这里选择的是2.7.6版本。需要注意的是，下载时请下载binary格式即 **hadoop-2.x.y.tar.gz** 这个格式的文件，这是编译好的，另一个包含 src 的则是 Hadoop 源代码，需要进行编译才可使用。
 
 下载时强烈建议也下载 **hadoop-2.x.y.tar.gz.mds** 这个文件，该文件包含了检验值可用于检查 hadoop-2.x.y.tar.gz 的完整性，否则若文件发生了损坏或下载不完整，Hadoop 将无法正常运行。
 
@@ -464,8 +464,8 @@ mr-jobhistory-daemon.sh stop historyserver
 
 ## 参考资料
 
-- Hadoop2.7.3在CentOS 6.5中的集群搭建    https://blog.csdn.net/chenshijie2011/article/details/75670086
+- Hadoop2.7.3在CentOS 6.5中的集群搭建    <https://blog.csdn.net/chenshijie2011/article/details/75670086>
 
-- Hadoop安装教程_伪分布式配置_CentOS6.4/Hadoop2.6.0    http://dblab.xmu.edu.cn/blog/install-hadoop-in-centos/
+- Hadoop安装教程_伪分布式配置_CentOS6.4/Hadoop2.6.0    <http://dblab.xmu.edu.cn/blog/install-hadoop-in-centos/>
 
-- Hadoop集群安装配置教程_Hadoop2.6.0_Ubuntu/CentOS    http://dblab.xmu.edu.cn/blog/install-hadoop-cluster/
+- Hadoop集群安装配置教程_Hadoop2.6.0_Ubuntu/CentOS    <http://dblab.xmu.edu.cn/blog/install-hadoop-cluster/>
