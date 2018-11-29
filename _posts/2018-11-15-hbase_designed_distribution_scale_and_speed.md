@@ -1,6 +1,7 @@
 ---
 layout: article
 title: 【译】为分布式、大规模、低延迟而设计的HBase
+key: 2018-11-15-hbase_designed_distribution_scale_and_speed
 tags: HBase
 ---
 

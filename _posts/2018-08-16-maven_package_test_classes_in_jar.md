@@ -1,6 +1,7 @@
 ---
 layout: article
 title: 使用Maven将src/test/java下的文件打包为jar并运行
+key: 2018-08-16-maven_package_test_classes_in_jar
 tags: Maven
 ---
 

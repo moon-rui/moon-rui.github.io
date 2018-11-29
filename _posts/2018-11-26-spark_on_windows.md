@@ -1,6 +1,7 @@
 ---
 layout: article
 title: Windows环境下安装部署Spark
+key: 2018-11-26-spark_on_windows
 tags: Spark
 ---
 

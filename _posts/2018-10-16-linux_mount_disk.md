@@ -1,6 +1,7 @@
 ---
 layout: article
 title: Linux挂载新添加的硬盘
+key: 2018-10-16-linux_mount_disk
 tags: Linux
 ---
 

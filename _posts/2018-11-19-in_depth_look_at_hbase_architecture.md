@@ -1,6 +1,7 @@
 ---
 layout: article
 title: 【译】深入了解HBase体系结构
+key: 2018-11-19-in_depth_look_at_hbase_architecture
 tags: HBase
 ---
 

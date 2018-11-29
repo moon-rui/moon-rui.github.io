@@ -1,6 +1,7 @@
 ---
 layout: article
 title: 【译】HBase表模式设计指南
+key: 2018-11-15-guidelines_hbase_schema_design
 tags: HBase
 ---
 

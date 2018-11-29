@@ -1,6 +1,7 @@
 ---
 layout: article
 title: Linux内存占满释放
+key: 2018-10-10-clear_memory_cache_linux
 tags: Linux
 ---
 
