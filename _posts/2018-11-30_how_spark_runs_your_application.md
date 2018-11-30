@@ -1,7 +1,7 @@
 ---
 layout: article
 title: 【译】Spark应用运行机制
-key: 2018-11-29_how_spark_runs_your_application
+key: 2018-11-30_how_spark_runs_your_application
 tags: Spark
 ---
 
