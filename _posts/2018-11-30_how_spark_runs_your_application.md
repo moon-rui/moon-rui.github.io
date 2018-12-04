@@ -3,6 +3,7 @@ layout: article
 title: 【译】Spark应用运行机制
 key: 2018-11-30_how_spark_runs_your_application
 tags: Spark
+sharing: true
 ---
 
 > 关于Spark如何将数据集的转换和操作变为可执行的模型，介绍如何使用Spark Web UI查看任务执行信息

@@ -3,6 +3,7 @@ layout: article
 title: Windows环境下安装部署Spark
 key: 2018-11-26-spark_on_windows
 tags: Spark
+sharing: true
 ---
 
 > 虽然在实际的生产环境中，Spark都是部署在Linux环境中。但是对于Windows用户或者对Linux系统并不熟悉的用户来说，了解在Windows环境下的安装部署对Spark的入门学习还是有帮助的。

@@ -4,7 +4,7 @@
 [![license](https://img.shields.io/github/license/kitian616/jekyll-TeXt-theme.svg)](https://github.com/kitian616/jekyll-TeXt-theme/blob/master/LICENSE)
 [![Travis](https://img.shields.io/travis/kitian616/jekyll-TeXt-theme.svg)](https://travis-ci.org/kitian616/jekyll-TeXt-theme)
 
-![TeXt Theme](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/screenshots/TeXt-home.png)
+![TeXt Theme](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/screenshots/TeXt-home.jpg)
 
 ![TeXt Theme Details](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/screenshots/TeXt-layouts.png)
 
@@ -12,36 +12,36 @@ TeXt 是针对个人或团队网站、博客、项目、文档等的一款高度
 
 [English Documentation](https://github.com/kitian616/jekyll-TeXt-theme/blob/master/README.md)
 
-## Features
+## 特性
 
 - 响应式
+- HTML 语意化
 - 皮肤
 - 代码高亮主题
-- 目录
-- 多作者
-- 多语言支持（English, 简体中文, 繁體中文）
+- 多语言支持
 - 搜索
-- Web 语意化
+- 目录
+- 作者（电子邮件，Facebook，Twitter，领英，微博，知乎等。支持多作者配置）
+- 附加样式（提示，标签，图片，图标，按钮，栅格等）
+- 扩展（音频，视频，幻灯片，在线示例）
+- Markdown 增强（[MathJax](https://www.mathjax.org/)，[mermaid](https://mermaidjs.github.io/)，[chartjs](http://www.chartjs.org/)）
+- 分享（[AddToAny](https://www.addtoany.com/)，[AddThis](https://www.addthis.com/)）
+- 评论（[Disqus](https://disqus.com/)，[Gitalk](https://gitalk.github.io/)）
+- 阅读量统计（[LeanCloud](https://leancloud.cn/)）
+- 站点统计（[Google Analytics](https://analytics.google.com/analytics/web/)）
 - RSS（[jekyll-feed](https://github.com/jekyll/jekyll-feed)）
-- 联系方式设置（Email, Facebook, Twitter, 微博, 知乎……）
-- 数学公式（[MathJax](https://www.mathjax.org/)）
-- 流程图， 序列图，甘特图（[mermaid](https://mermaidjs.github.io/)）
-- 柱状图，折线图，饼图，雷达图（[chartjs](http://www.chartjs.org/)）
-- 阅读次数统计（[LeanCloud](https://leancloud.cn/)）
-- 评论（[Disqus](https://disqus.com/), [gitalk](https://gitalk.github.io/)）
-- Google Analytics
 
 ## 皮肤
 
-TeXt 内置以下 6 套皮肤：
+TeXt 内置有 6 套皮肤，你也可以定制自己的皮肤。
 
 | `default` | `dark` | `forest` |
 | --- |  --- | --- |
-| ![Default](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/screenshots/skins_default.png) | ![Dark](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/screenshots/skins_dark.png) | ![Forest](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/screenshots/skins_forest.png) |
+| ![Default](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/screenshots/skins_default.jpg) | ![Dark](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/screenshots/skins_dark.jpg) | ![Forest](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/screenshots/skins_forest.jpg) |
 
 | `ocean` | `chocolate` | `orange` |
 | --- |  --- | --- |
-| ![Ocean](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/screenshots/skins_ocean.png) | ![Chocolate](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/screenshots/skins_chocolate.png) | ![Orange](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/screenshots/skins_orange.png) |
+| ![Ocean](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/screenshots/skins_ocean.jpg) | ![Chocolate](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/screenshots/skins_chocolate.jpg) | ![Orange](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/screenshots/skins_orange.jpg) |
 
 ### 代码高亮主题
 
@@ -56,7 +56,7 @@ TeXt 使用 [Tomorrow](https://github.com/chriskempson/tomorrow-theme) 作为它
 ### 开始
 
 - [快速开始](https://tianqi.name/jekyll-TeXt-theme/docs/zh/quick-start)
-- [从 1.x 升级到 2.x](https://tianqi.name/jekyll-TeXt-theme/docs/zh/update-form-1-to-2)
+- [从 1.x 升级到 2.x](https://tianqi.name/jekyll-TeXt-theme/docs/zh/update-from-1-to-2)
 
 ### 定制
 
@@ -69,8 +69,9 @@ TeXt 使用 [Tomorrow](https://github.com/chriskempson/tomorrow-theme) 作为它
 ### 内容
 
 - [撰写博客](https://tianqi.name/jekyll-TeXt-theme/docs/zh/writing-posts)
-- [Markdown 增强](https://tianqi.name/jekyll-TeXt-theme/docs/zh/markdown-enhancements)
 - [附加样式](https://tianqi.name/jekyll-TeXt-theme/docs/zh/additional-styles)
+- [扩展](https://tianqi.name/jekyll-TeXt-theme/docs/zh/extensions)
+- [Markdown 增强](https://tianqi.name/jekyll-TeXt-theme/docs/zh/markdown-enhancements)
 
 ## 其他资源
 
@@ -80,8 +81,9 @@ TeXt 使用 [Tomorrow](https://github.com/chriskempson/tomorrow-theme) 作为它
 
 | Name | Description |
 | --- | --- |
-| [Home](https://tianqi.name/jekyll-TeXt-theme/test/) | 文章列表页 |
-| [Archive](https://tianqi.name/jekyll-TeXt-theme/archive.html) | 过滤标签和查询 |
+| [Home](https://tianqi.name/jekyll-TeXt-theme/test/) | 列表页 |
+| [Archive](https://tianqi.name/jekyll-TeXt-theme/archive.html) | 归档页 |
+| [Layout Examples](https://tianqi.name/jekyll-TeXt-theme/samples.html) | 各种布局示例 |
 
 ## 协议
 

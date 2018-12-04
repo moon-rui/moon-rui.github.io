@@ -1,5 +1,58 @@
 # Change Log
 
+## 2.2.3 (2018-11-11)
+
+### Enhancements
+
+- Add Swiper component
+- Special stylesheets for print
+- Add AddThis sharing service (@liao961120)
+- Add extensions for demos (CodePen)
+
+## 2.2.2 (2018-10-21)
+
+### Enhancements
+
+- Add extensions for audios (SoundCloud, Netease Cloud Music), videos (YouTube, TED, bilibili) and slide(SlideShare)
+- Add sharing (AddToAny)
+
+## 2.2.1 (2018-10-02)
+
+### Enhancements
+
+- Update screenshots
+- landing Layout `data.sections` item's `image` add `full_width` setting
+- Remove `header.type` and add `header.background` setting
+- page layout sidebar use document scroll when viewport width < 1024px, this enhance the user experience on a phone or a pad
+- Telegram social icon (@WangQiru)
+- Search panel use dark background
+
+## 2.2.0 (2018-09-16)
+
+### Enhancements
+
+- `article_header` config for Page Layout
+- Articles Layout
+- New grid system
+- Image, card, item and hero components
+- Tag additional style
+- chart.js update to 2.7.2, mathjax update to 2.7.4 and mermaid update to 8.0.0-rc.8
+
+### Bug Fixes
+
+- replace Lenna example image
+
+## 2.1.0 (2018-08-26)
+
+### Enhancements
+
+- Search panel (Click search icon in the header or press `s` or `/` key to search)
+- Npm social icon (@WangQiru)
+
+### Bug Fixes
+
+- Google analytics may not work, use gtag.js
+
 ## 2.0.2 (2018-07-29)
 
 ### Enhancements
@@ -28,7 +81,7 @@
 
 ## 2.0.0 (2018-07-01)
 
-Breaking changes, please check [Update form 1.x to 2.x](https://tianqi.name/jekyll-TeXt-theme/docs/en/update-form-1-to-2) for details
+Breaking changes, please check [Update from 1.x to 2.x](https://tianqi.name/jekyll-TeXt-theme/docs/en/update-from-1-to-2) for details
 
 ### Enhancements
 
@@ -98,7 +151,7 @@ Breaking changes, please check [Update form 1.x to 2.x](https://tianqi.name/jeky
 ### Enhancements
 
 - MathJax Support
-- Add “Read more” link at the end of article excerpt.
+- Add “Read more” link at the end of article excerpt
 - 404 page
 
 ### Bug Fixes
