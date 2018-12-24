@@ -6,7 +6,6 @@ tags: Zookeeper
 ---
 
 > 翻译自tutorialspoint上的zookeeper教程，介绍zookeeper中的基本概念。
->
 > 原文链接：[Zookeeper - Fundamentals](https://www.tutorialspoint.com/zookeeper/zookeeper_fundamentals.htm)
 
 <!--more-->
