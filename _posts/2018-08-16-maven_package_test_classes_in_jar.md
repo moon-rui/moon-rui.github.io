@@ -75,7 +75,7 @@ public class ServiceTest {
     </executions>
 </plugin>
 ```
-根据maven-assembly-plugin插件配置中的路径src/main/assembly/assembly.xml，添加并配置assembly.xml文件：
+根据`maven-assembly-plugin`插件配置中的路径`src/main/assembly/assembly.xml`，添加并配置`assembly.xml`文件：
 ```xml
 <assembly
         xmlns="http://maven.apache.org/plugins/maven-assembly-plugin/assembly/1.1.3"

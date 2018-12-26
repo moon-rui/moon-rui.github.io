@@ -59,13 +59,13 @@ if(IS_CONTROL[i] || i > 127 || i == 32 || i == 34 || i == 35 || i == 60 || i == 
 
 **解决方法1：**
 
-配置tomcat的catalina.properties
+配置tomcat的`catalina.properties`
 
 添加或者修改：
 
-tomcat.util.http.parser.HttpParser.requestTargetAllow=\|{}
+```tomcat.util.http.parser.HttpParser.requestTargetAllow=\|{}```
 
-上述配置允许URL中包含\|{}字符，如果包含中文就不能使用这种配置。
+上述配置允许URL中包含`\|{}`字符，如果包含中文就不能使用这种配置。
 
 **解决方法2：**
 
@@ -73,7 +73,7 @@ tomcat.util.http.parser.HttpParser.requestTargetAllow=\|{}
 
 **解决方法3：**
 
-对请求链接进行编码转义，可以使用JS中的encodeURI和decodeURI函数。Chrome、Firefox等浏览器会对URL自动进行转义，而IE却不行。这也是只有在用IE访问的情况下会报错的原因。
+对请求链接进行编码转义，可以使用JS中的`encodeURI`和`decodeURI`函数。Chrome、Firefox等浏览器会对URL自动进行转义，而IE却不行。这也是只有在用IE访问的情况下会报错的原因。
 
 **解决方法4：**
 
