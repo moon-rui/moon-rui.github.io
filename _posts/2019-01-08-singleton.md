@@ -37,7 +37,7 @@ public class Singleton {
 ```java
 public class Singleton {
   // 声明私有静态实例变量，赋值为null，注意要使用volatile关键字修饰
-  private volatitle Singleton instance = null;
+  private volatile Singleton instance = null;
 
   // 声明构造方法为私有
   private Singleton() {}
