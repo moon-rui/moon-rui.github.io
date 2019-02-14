@@ -112,11 +112,12 @@ list.set(1,"t");    int b = a;
 
 翻译过来就是，线程中将一个对象放入并发集合之前的操作`happen-before`另一线程中的访问或移除该集合元素的后续操作。具体对于上面的例子，保证了set `happen-before` get，就保证了b最后的值是1。
 
-对于CopyOnWriteArrayList，如何保证set `happen-before` get。对lock的解锁与加锁是符合`happen-before`原则的，但是get方法中并没有加锁操作。除此之外，volatile变量的写操作`happen-before`读操作。setArray方法中有对volatile变量array的写操作，只要保证if else分支中都有setArray方法，就保证了set happen-before get。这里比较巧妙地运用了volatile变量的特性，在get方法不加锁的情况下，保证了`happen-before`原则。
+对于CopyOnWriteArrayList，如何保证set `happen-before` get。对lock的解锁与加锁是符合`happen-before`原则的，但是get方法中并没有加锁操作。除此之外，volatile变量的写操作`happen-before`读操作。setArray方法中有对volatile变量array的写操作，只要保证if else分支中都有setArray方法，就保证了set `happen-before` get。这里比较巧妙地运用了volatile变量的特性，在get方法不加锁的情况下，保证了`happen-before`原则。
 
 总结来说，else分支中的操作不是为了CopyOnWriteArrayList本身的可见性，而是为了保证list外部非volatile变量操作的内存可见性。副本写入和无锁的get方法等特性使得CopyOnWriteArrayList适用于读多写少的应用场景，但同时对内存的占用较高，不能保证读取数据的实时性，有可能会读到旧的数据。
 
 **参考文档**
 
 <http://ifeve.com/easy-happens-before/>
+
 <http://ifeve.com/copyonwritearraylist-set/>
