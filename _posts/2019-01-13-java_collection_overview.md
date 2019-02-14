@@ -13,9 +13,10 @@ tags:
 
 ## 层次关系图
 ![image](https://ws3.sinaimg.cn/large/7dfacda1ly1fzq1e5q5khj21mq0q5q5t.jpg)
+上图中，红色的框表示接口，蓝色为抽象类，绿框是java.util.concurrent包下的并发类，灰色是较早JDK版本中的集合类，不建议使用。可以看出，Java集合类可以分为Collection和Map两大接口，List、Set和Queue分别继承了Collection接口。了解Java集合类之间的层次关系，对于我们接下来学习阅读集合类的源码有很大的帮助。
 
 ## fail-fast机制
-A fail-fast system is nothing but immediately report any failure that is likely to lead to failure. When a problem occurs, a fail-fast system fails immediately.
+> A fail-fast system is nothing but immediately report any failure that is likely to lead to failure. When a problem occurs, a fail-fast system fails immediately.
 In Java, we can find this behavior with iterators. In case, you have called iterator on a collection object, and another thread tries to modify the collection object, then concurrent modification exception will be thrown. This is called fail-fast.
 
 fail-fast机制是指在迭代遍历集合的时候，另一线程对集合进行修改操作，就会抛出ConcurrentModificationException异常。
