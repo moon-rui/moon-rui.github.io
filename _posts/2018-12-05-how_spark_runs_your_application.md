@@ -10,7 +10,7 @@ tags: Spark
 
 <!--more-->
 
-为了理解应用程序如何在集群上运行，了解数据集的转换非常重要，它分为两种类型，窄类型(narrow)和宽类型(wide)，在解释执行模型之前，我们将先讨论这两种类型。
+为了理解应用程序如何在Spark集群上运行，了解数据集的转换非常重要，它分为两种类型，窄类型(narrow)和宽类型(wide)，在解释执行模型之前，我们将先讨论这两种类型。
 ![avatar](https://mapr.com/blog/how-spark-runs-your-applications/assets/image18.png)
 
 ## 窄转换与宽转换

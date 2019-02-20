@@ -13,9 +13,9 @@ tags: HBase
 
 ## HBase架构组件
 
-从物理存储上来看，HBase基于主从架构，由三种类型的服务组成。RegionServer提供读写数据的服务。当访问数据时，客户端直接与HBase的RegionServer进行通信。Region的分配和DDL操作(创建、删除表)由HBase的Master进程来处理。Zookeeper作为HDFS的一部分，负责维护集群状态。
+从物理存储上来看，HBase基于主从架构，由三种类型的服务组件组成。RegionServer提供读写数据的服务。当访问数据时，客户端直接与HBase的RegionServer进行通信。Region的分配和DDL操作(创建、删除表)由HBase的Master进程来处理。Zookeeper作为HDFS的一部分，负责维护集群状态。
 
-Hadoop的DataNode用来储存RegionServer管理的数据。所有的HBase数据都存储在HDFS文件中。RegionServer与HDFS的DataNode是并列的关系，以保证RegionServer所管理的数据具有数据局部性(data locality, 把数据放在需求的地方)。当HBase的数据被写入时是本地的，但是当一个Region被移动时，在被压缩之前数据不是本地的。 
+Hadoop的DataNode用来储存RegionServer管理的数据。所有的HBase数据都存储在HDFS文件中。RegionServer与HDFS的DataNode是并列的关系，以保证RegionServer所管理的数据具有数据局部性(data locality, 即将数据放在需要的地方)。当HBase的数据被写入时是本地的，但是当一个Region被移动时，在被压缩之前它的数据不是本地的。 
 
 NameNode维护包含文件的所有物理数据块的元数据信息。
 
@@ -23,7 +23,7 @@ NameNode维护包含文件的所有物理数据块的元数据信息。
 
 ## Regions
 
-HBase表按照行键的范围被水平划分到多个region中。一个region中包含了表中从region的开始键到结束键的所有行。Region被分配给集群中的节点，称为“RegionServer”，这些节点为提供读写数据服务。一个RegionServer大约可以服务1000个region。
+HBase表按照行键的范围被水平划分到多个region中。一个region中包含了表中从region的开始键到结束键的所有行。Region被分配给集群中的节点，称为“RegionServer”，这些节点为读写数据提供服务。一个RegionServer大约可以服务1000个region。
 
 ![avatar](https://mapr.com/blog/in-depth-look-hbase-architecture/assets/blogimages/HBaseArchitecture-Blog-Fig2.png)
 
@@ -45,7 +45,7 @@ HBase Master负责处理region的分配和DDL操作(创建、删除表)。
 
 ## 协调器ZooKeeper
 
-HBase使用ZooKeeper作为分布式协调服务来维护集群中的服务器状态。ZooKeeper维护哪些服务器是可用的，并提供服务器故障通知。ZooKeeper使用信息一致性来保证共同的共享状态。注意为了达成一致性，至少应该有3到5台机器。
+HBase使用ZooKeeper作为分布式协调服务来维护集群中的服务器状态。ZooKeeper监听哪些服务器是可用的，并提供服务器故障的通知。ZooKeeper使用信息一致性来保证共同的共享状态。注意为了达成一致性，至少应该有3到5台机器。
 
 ![avatar](https://mapr.com/blog/in-depth-look-hbase-architecture/assets/blogimages/HBaseArchitecture-Blog-Fig4.png)
 
@@ -90,7 +90,7 @@ HBase的Catalog表中有一张特殊的表称为META表，这张表包含了集�
 RegionServer运行在HDFS数据节点上，有以下组件：
 
 - WAL：WAL(Write Ahead Log)是分布式文件系统中的一个文件，用来存储尚未被持久化的新数据，以便于在出现故障时进行数据恢复。
-- BlockCache：读缓存，将频繁读取的数据存储在内存中。最近使用最少的数据在缓存满是会被删除。
+- BlockCache：读缓存，将频繁读取的数据存储在内存中。最近使用最少的数据在缓存满时会被删除。
 - MemStore：写缓存，存储尚未被写入磁盘的新数据，在写入磁盘之前对数据进行排序。每个region中的每个列族有一个MemStore。
 - HFile：将按照键值排序的行存储在磁盘上。
 
@@ -119,7 +119,7 @@ MemStore将按键值排序的更新数据存储在内存中，与将被存到HFi
 
 当MemStore中积累了足够多的数据时，会将整个数据集写入到HDFS中的新HFile中。HBase在每个列族中使用多个HFile，其中包含了实际cell或KeyValue实例。当MemStore中的有序键值数据以文件的形式刷新到磁盘上时，这些HFile也随之被创建。
 
-注意这也是为什么HBase中列族数量是有限制的原因。每个列族有一个MemStore，数据满的时候会刷新到磁盘.HFile中存储了最后写入的序列号，以便让系统知道数据持久化的进度。
+注意这也是为什么HBase中列族数量是有限制的原因。每个列族有一个MemStore，数据满的时候会刷新到磁盘。HFile中存储了最后写入的序列号，以便让系统知道数据持久化的进度。
 
 最高序列号存储在每个HFile中的元字段中，以反映持久化已结束的位置和要继续的位置。Region启动的时候，会读取序列号，并将最高值用于新的操作中。
 
@@ -127,7 +127,7 @@ MemStore将按键值排序的更新数据存储在内存中，与将被存到HFi
 
 ## HBase HFile
 
-数据存储在一个包含有序键/值的HFile中。当MemStore中积累了足够的数据时，整个有序键值集合会被写入到HDFS中的新HFile中。这是一个顺序写操作，因为避免了移动磁盘驱动器头，所以非常快速。
+数据存储在一个包含有序键/值的HFile中。当MemStore中积累了足够的数据时，整个有序键值集合会被写入到HDFS中的新HFile中。这是一个顺序写操作，因为避免了移动磁盘头，所以非常快速。
 
 ![avatar](https://mapr.com/blog/in-depth-look-hbase-architecture/assets/blogimages/HBaseArchitecture-Blog-Fig13.png)
 
@@ -155,7 +155,7 @@ Trailer指向元数据块，并被写入到文件中持久化数据的末尾。T
 
 通过上面的介绍可以看到，一行对应的键值cell可能位于多个不同的位置上。已持久化的cell位于HFile中，最近更新的cell在MemStore中，最近读取的cell在BlockCache中。那么当读取一行内容的时候，系统通过以下步骤中合并来自BlockCache、MemStore和HFile中的键值：
 
-1.  首先，扫描程序在BlockCache中寻找行cell。
+1. 首先，扫描程序在BlockCache中寻找行cell。
 2. 接下来再在MemStore中查找。
 3. 如果扫描程序在MemStore和BlockCache中没有找到全部的行cell，HBase会使用BlockCache缓存和布鲁姆过滤器将HFile加载到内存，继续寻找其余的目标行cell。
 
@@ -173,7 +173,7 @@ Trailer指向元数据块，并被写入到文件中持久化数据的末尾。T
 
 ## HBase Major Compaction
 
-高度压实(Major compaction)将region中所有的HFile进行合并和重写，为每个列族生成一个HFile。在这个过程中，有删除标记或过期的cell会被移除。高度压实可以提供读取性能，但是由于需要重写所有的文件，这个过程会产生大量的磁盘IO和网络流量，这种现象称为写放大(write amplification)。
+高度压实(Major compaction)将region中所有的HFile进行合并和重写，为每个列族生成一个HFile。在这个过程中，有删除标记或过期的cell会被移除。高度压实可以提高读取性能，但是由于需要重写所有的文件，这个过程会产生大量的磁盘IO和网络流量，这种现象称为写放大(write amplification)。
 
 高度压实可以设置按计划自动运行，但由于写放大，通常安排在周末或者晚上进行。由于服务器故障或者负载均衡，高度压实会使得原先的远程数据文件变为RegionServer的本地文件。
 
@@ -198,7 +198,7 @@ Trailer指向元数据块，并被写入到文件中持久化数据的末尾。T
 
 ## 读负载平衡
 
-上文提到，region的分割最初发生在同一RegionServer上，但是出于负载均衡的原因，HMaster可能会将新region转移到其他服务器上。这导致RegionServer需要为远程的HDFS节点数据提供服务，直到高度压实操作将数据文件移动到RegionServer的本地节点。HBase数据在一开始写入时是本地的，但是当一个region被移动(由于负载均衡或数据恢复)时，在高度压实之前它都不会存储在本地。
+上文提到，region的分割最初发生在同一RegionServer上，但是由于负载均衡的原因，HMaster可能会将新region转移到其他服务器上。这导致RegionServer需要为远程的HDFS节点数据提供服务，直到高度压实操作将数据文件移动到RegionServer的本地节点。HBase数据在一开始写入时是本地的，但是当一个region被移动(由于负载均衡或数据恢复)时，在高度压实之前它都不会存储在本地。
 
 ![avatar](https://mapr.com/blog/in-depth-look-hbase-architecture/assets/blogimages/HBaseArchitecture-Blog-Fig22.png)
 
@@ -220,7 +220,7 @@ Trailer指向元数据块，并被写入到文件中持久化数据的末尾。T
 
 ## 数据恢复
 
-WAL文件包含一个编辑列表，其中一个编辑表示一个put或delete操作。编辑是按时间顺序写入的，因此，为了持久化，会附加到存储在磁盘上的WAL文件的末尾。
+WAL文件包含一个编辑列表，其中一个编辑表示一个put或delete操作。编辑是按时间顺序写入的，因此，为了持久化，每次编辑会附加到存储在磁盘上的WAL文件的末尾。
 
 如果数据仍然在内存中且没有持久化到HFile中的时候出现故障，会发生什么情况？通过读取WAL文件重新执行WAL，把其中包含的编辑添加到当前的MemStore中并对其进行排序。最后，MemStore将所做的更改刷新到HFile中。
 
@@ -228,7 +228,7 @@ WAL文件包含一个编辑列表，其中一个编辑表示一个put或delete�
 
 ## Apache HBase架构的优点
 
-- 强一致性模型
+- 强一致性
   - 当写入返回时，所有的读取得到的都是同样的值
 - 弹性伸缩
   - 当数据过大时分割region
