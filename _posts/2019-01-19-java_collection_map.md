@@ -12,6 +12,7 @@ tags:
 <!--more-->
 
 HashMap、LinkedHashMap和ConcurrentHashMap在存储结构上是类似的，底层都是`数组+链表`的形式，在JDK1.8中，引入了红黑树结构，避免因链表过长导致查询效率的降低。
+![image](https://wx3.sinaimg.cn/large/7dfacda1ly1g06a2qonhhj20ia09tjrk.jpg)
 
 # HashMap
 ## 成员变量
